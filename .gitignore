@@ -1,0 +1,19 @@
+
+# Python
+__pycache__/
+*.pyc
+
+# Environments
+.venv/
+venv/
+
+# Data & artifacts
+/data/intermediate/
+/data/processed/
+/artifacts/models/
+/artifacts/reports/
+/artifacts/logs/
+
+# OS files
+.DS_Store
+Thumbs.db

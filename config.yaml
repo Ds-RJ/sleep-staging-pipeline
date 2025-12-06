@@ -1,0 +1,39 @@
+
+epoch_len_sec: 30
+sampling_floor_hz: 0.5
+sampling_ceiling_hz: 50
+
+channels_to_use:
+  - "EEG Fpz-Cz"
+  - "EEG Pz-Oz"
+  # - "EOG horizontal"
+  # - "EMG Submental"
+
+bands_hz:
+  delta: [0.5, 4]
+  theta: [4, 8]
+  alpha: [8, 13]
+  beta:  [13, 30]
+  gamma: [30, 50]
+
+rk_codes_map:
+  0: "Movement"
+  1: "Wake"
+  2: "Stage 1"
+  3: "Stage 2"
+  4: "Stage 3"
+  5: "REM"
+  6: "Unknown"
+  9: "Undefined"
+
+use_aasm: true
+drop_movement: true
+drop_undefined: true
+
+use_welch: true
+use_stft: false
+use_pwvd: false
+
+n_splits_group_kfold: 5
+random_state: 42
+test_size: 0.2
